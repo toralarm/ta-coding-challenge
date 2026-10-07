@@ -1,52 +1,57 @@
 # Coding challenge
 
-Build a small version of TorAlarm: a match list and a match details page.
+Build a small version of TorAlarm: A match list and a match details page.
 
 The app is deliberately small. The important part of this task, and of the interview, is bug mode: five real incidents from your career, visible in the app, which you will present.
 
-AI assistance is explicitely allowed.
+AI assistance is explicitly allowed.
 
-Plan on about 4–6 hours for the build. The incident notes are interview preparation, separate from that time.
+Plan on about 1-2 hours for the implementation and another 2 hours for the incident notes as part of your interview preparation.
 
 ## What to build
 
 Use React for the UI and a small Go web server for the backend.
 
-The browser talks only to your Go server. The server exposes two endpoints: matches for one date, and a single match by id. It owns the data source, the date window, and any caching. The browser never calls a football API directly and never sees an API key.
-
-Use any API that can deliver football results, or commit fixture files and serve those. A reviewer must be able to start the app with one command and no secrets. Document the Go and Node versions and that command. Do not commit API keys.
-
 ### Match list
 
 - Show one day of matches at a time.
-- Each match shows the home and away team names and crests. Use a fallback when a crest is missing.
-- Previous and next move by one day, limited to today −7 days through today +7 days.
-- Clicking a match opens its details page.
+- Each match shows the home and away team names
+- Previous and next move by one day, limited to today −7 days through today +7 days
+- Clicking a match opens its details page
 
 ### Match details
 
-- Score for both sides, and the match status: scheduled, live, finished, or postponed.
-- Events. Each event has a minute, a type, a team, and a short label. Always show goals. Show cards and substitutions when the data includes them.
-- Kick-off time. Store it in UTC and display it in the viewer's local timezone, and show that the original time was UTC.
+- Show the teams, their logos, the score, match status and kickoff
+- Should show all goals, cards and subs
 
-### While using it
+### General
 
-- Also take care of classical edge cases like no/bad network, failing APIs or invalid data
+- The app is simple, so make sure also deliver a good UX - copying concepts from TorAlarm or other apps is absolutely allowed
+- Take care of classical edge cases like no/bad network, failing APIs or invalid data
+- You are free to choose any football data API
+- Make sure that you provide clear instructions on how to launch your app
+- You are free to choose any type of communication between browser and web server
+
+## Design Choices
+In the interview you will be asked to explain your decisions on architecture, technology, APIs, data flows and coding style. Please prepare yourself for these kind of questions.
 
 ## Bug mode
 
-When the implementation above is done, support the query parameter `bug-mode=true`. 
+When the implementation done, add support for the query parameter `bug-mode=true`. 
 
 With that parameter, the app should contain five or more bugs. 
-Each bug is an incident you have seen or caused in your career. If you feel that is not doable with the current example app feel free to extend it to accomodate for your bug use case.
+Each bug is an incident you have seen or caused in your career. If you think that is not doable with the current example app feel free to extend it to accommodate for your bug use case/s.
 
 If you have fewer than five production incidents, say so. You may fill the remaining slots with a public incident write-up you have studied. Mark those clearly as studied.
 
 In the interview you will present each bug. For each one, be ready to answer:
 
-- How is caused/reproduced?
+- How is it caused/reproduced?
 - How was it caught?
 - How long did it exist, and why that long or that short?
 - What was the fix?
 - How would you rate this fix?
 - What was wrong in the engineering flow that led to the bug?
+
+Note: These questions go beyond your code alone. 
+We will also cover classical everday engineering challenges (behavorial, cultural ...)
