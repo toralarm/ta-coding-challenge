@@ -3,8 +3,12 @@
 Build a small version of TorAlarm: A match list and a match details page.
 
 For inspiration you can download TorAlarm app from here:
-https://apps.apple.com/de/app/toralarm-fu%C3%9Fball-ergebnisse/id484990052
-https://play.google.com/store/apps/details?id=com.eisterhues_media_2&hl=en
+
+  
+[https://apps.apple.com/de/app/toralarm-fu%C3%9Fball-ergebnisse/id484990052](https://apps.apple.com/de/app/toralarm-fu%C3%9Fball-ergebnisse/id484990052)  
+[https://play.google.com/store/apps/details?id=com.eisterhues_media_2&hl=en](https://play.google.com/store/apps/details?id=com.eisterhues_media_2&hl=en)
+
+
 
 The app is deliberately small. The important part of this task, and of the interview, is bug mode: five real incidents from your career, visible in the app, which you will present.
 
@@ -16,6 +20,8 @@ Plan on about 1-2 hours for the implementation and another 2 hours for the incid
 - Use React for the UI 
 - A small Go web server for the backend
 
+
+
 ### Match list
 
 - Show one day of matches at a time.
@@ -23,10 +29,14 @@ Plan on about 1-2 hours for the implementation and another 2 hours for the incid
 - Previous and next move by one day, limited to today −7 days through today +7 days
 - Clicking a match opens its details page
 
+
+
 ### Match details
 
 - Show the teams, their logos, the score, match status and kickoff
 - Should show all goals, cards and subs
+
+
 
 ### General
 
@@ -36,7 +46,10 @@ Plan on about 1-2 hours for the implementation and another 2 hours for the incid
 - Make sure that you provide clear instructions on how to launch your app
 - You are free to choose any type of communication between browser and web server
 
+
+
 ## Design Choices
+
 In the interview you will be asked to explain your decisions on architecture, technology, APIs, data flows and coding style. Please prepare yourself for these kind of questions.
 
 ## Bug mode
